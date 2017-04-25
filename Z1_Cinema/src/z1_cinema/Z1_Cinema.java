@@ -11,6 +11,13 @@ import java.util.TreeSet;
 import java.util.UUID;
 
 public class Z1_Cinema {
+	
+	/**
+	 * 
+	 * field;
+	 * 
+	 * */
+	
 	public static final Map<Z1_Days, Z1_Schedule> daysAndMovie = new TreeMap<Z1_Days, Z1_Schedule>();
 
 	/**
@@ -22,7 +29,13 @@ public class Z1_Cinema {
 	Z1_Cinema() {
 		super();
 	}
-
+    
+	/**
+     * 
+     * getter for daysAndMovie;
+     * 
+     * */
+	
 	Map<Z1_Days, Z1_Schedule> getDaysAndMovie() {
 		return daysAndMovie;
 	}
@@ -56,31 +69,6 @@ public class Z1_Cinema {
     	 for (Map.Entry<Z1_Days, Z1_Schedule> cinema: daysAndMovie.entrySet())
     		 System.out.println(cinema);
      }
-	
-	
-	
-//	public void removeMovie(Z1_Movie movieToAddAndRemove) { // видаляє фільм з
-//		System.out.println("enter day to delete movie: ");
-//		String dayName = Z1_Main_Cinema.scanner.next();
-//		Iterator<Entry<Z1_Days, Z1_Schedule>> iterator = daysAndMovie
-//				.entrySet().iterator();
-//		while (iterator.hasNext()) {
-//			Entry<Z1_Days, Z1_Schedule> entry = iterator.next();
-//			if (dayName.equalsIgnoreCase(entry.getKey().name())) {
-//				// System.out.println("enter movie title:");
-//				String title = "Our_movie_to_add";
-//				Set<Z1_Seanse> seanses = entry.getValue().getSeanse();
-//				Iterator<Z1_Seanse> iter = seanses.iterator();
-//				while (iter.hasNext()) {
-//					Z1_Seanse seanse = iter.next();
-//					if (seanse.getMovie().getTitle().equalsIgnoreCase(title)) {
-//						iter.remove();
-//					}
-//				}
-//			}
-//		}
-//		System.out.println(daysAndMovie);
-//	}
 
 	/**
 	 * container for create  movie; 
@@ -305,24 +293,4 @@ public class Z1_Cinema {
 				if (seanse.getMovie().getTitle().equalsIgnoreCase(title)) 
 				iter.remove();}}Z1_Cinema.showAllSeanses();
 	}
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	//    	String title = inputNameOfMovieFromScanner();
-//    	for (Map.Entry<Z1_Days, Z1_Schedule> mep: daysAndMovie.entrySet()){
-//           for(Z1_Seanse sean:   mep.getValue().getSeanse()){
-//    		if(title.equalsIgnoreCase(sean.getMovie().getTitle())){
-//    		mep.getValue().removeMovie(new Z1_Movie(sean.getMovie().getTitle(),sean.getMovie().getDuration()));}	
-//    			}}
-//    	Z1_Cinema.showAllSeanses();
-      
-    
-}
+}    	
